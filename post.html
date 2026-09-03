@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yazı — CyberBlog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/highlight-theme.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">▮</span>
+      <span class="brand-text">Cyber<strong>Blog</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Yazılar</a>
+      <a href="index.html#hakkinda">Hakkında</a>
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Temayı değiştir">
+        <span class="theme-icon"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="index.html">← Tüm yazılar</a>
+
+  <article class="article">
+    <header class="article-head">
+      <div id="postTags" class="tag-bar small"></div>
+      <h1 id="postTitle">Yükleniyor…</h1>
+      <p class="article-meta"><time id="postDate"></time><span id="postRead"></span></p>
+    </header>
+    <div id="postBody" class="prose"></div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> CyberBlog</span>
+    <span class="muted small">Statik site · GitHub Pages</span>
+  </div>
+</footer>
+
+<!-- Markdown + kod renklendirme + XSS temizleme (yerel kopyalar, internet gerekmez) -->
+<script src="assets/vendor/marked.min.js"></script>
+<script src="assets/vendor/highlight.min.js"></script>
+<script src="assets/vendor/purify.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CyberBlog — Siber Güvenlik Notları</title>
+<meta name="description" content="Siber güvenlik, pentest ve AI güvenliği üzerine notlar, yazılar ve writeup'lar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">▮</span>
+      <span class="brand-text">Cyber<strong>Blog</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Yazılar</a>
+      <a href="#hakkinda">Hakkında</a>
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Temayı değiştir">
+        <span class="theme-icon"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Siber güvenlik günlüğü</p>
+      <h1>Öğrendiklerimi <span class="hl">yazarak</span> pekiştiriyorum.</h1>
+      <p class="lede">Pentest notları, TryHackMe writeup'ları, araç incelemeleri ve AI&nbsp;güvenliği üzerine denemeler.</p>
+    </div>
+  </section>
+
+  <section class="wrap toolbar">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+      <input id="search" type="search" placeholder="Yazılarda ara…" autocomplete="off">
+    </div>
+    <div id="tagBar" class="tag-bar"></div>
+  </section>
+
+  <section class="wrap">
+    <div id="postList" class="post-list">
+      <p class="muted">Yazılar yükleniyor…</p>
+    </div>
+  </section>
+
+  <section id="hakkinda" class="wrap about">
+    <h2>Hakkında</h2>
+    <p>Bu blog, siber güvenlik alanında öğrendiklerimi düzenli olarak paylaştığım kişisel bir defter.
+       Amacım hem kendi notlarımı toparlamak hem de aynı yoldan geçenlere faydalı olmak.</p>
+    <p class="muted small">İletişim: <a href="mailto:bozkirburak@outlook.com">bozkirburak@outlook.com</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> CyberBlog</span>
+    <span class="muted small">Statik site · GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

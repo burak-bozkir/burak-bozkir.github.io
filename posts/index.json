@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "nmap-ile-ag-kesfi",
+    "title": "Nmap ile Ağ Keşfi: Temelden Pratiğe",
+    "date": "2026-09-03",
+    "summary": "Bir hedefi taramaya nereden başlanır? Nmap'in en çok kullandığım bayrakları, tarama tipleri ve çıktıyı okuma yöntemim.",
+    "tags": ["Nmap", "Recon", "Araçlar"]
+  },
+  {
+    "slug": "xss-nedir",
+    "title": "XSS Nedir? Üç Tipini Örneklerle Anlamak",
+    "date": "2026-09-01",
+    "summary": "Reflected, Stored ve DOM-based XSS arasındaki farkı, nasıl test edildiğini ve nasıl kapatıldığını sade bir dille anlatıyorum.",
+    "tags": ["Web Security", "XSS", "OWASP"]
+  }
+]

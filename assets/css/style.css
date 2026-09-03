@@ -1,0 +1,168 @@
+/* ============================================================
+   CyberBlog — tema değişkenleri
+   Renkleri değiştirmek istersen sadece burayı düzenle.
+   ============================================================ */
+:root {
+  --accent:        #2563eb;
+  --accent-soft:   rgba(37, 99, 235, .12);
+  --bg:            #ffffff;
+  --bg-soft:       #f6f7f9;
+  --card:          #ffffff;
+  --border:        #e4e7ec;
+  --text:          #14181f;
+  --text-dim:      #5b6472;
+  --code-bg:       #0f1420;
+  --radius:        14px;
+  --wrap:          760px;
+  --font:          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono:          "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+[data-theme="dark"] {
+  --accent:        #60a5fa;
+  --accent-soft:   rgba(96, 165, 250, .14);
+  --bg:            #0d1117;
+  --bg-soft:       #12171f;
+  --card:          #141a23;
+  --border:        #232b36;
+  --text:          #e7ecf3;
+  --text-dim:      #93a1b3;
+  --code-bg:       #0a0e15;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--text-dim); }
+.small { font-size: .875rem; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.brand { display: flex; align-items: center; gap: 9px; color: var(--text); font-weight: 600; letter-spacing: -.01em; }
+.brand:hover { text-decoration: none; }
+.brand-mark { color: var(--accent); font-size: 1.1rem; line-height: 1; }
+.brand-text strong { font-weight: 700; }
+.nav { display: flex; align-items: center; gap: 20px; }
+.nav a { color: var(--text-dim); font-size: .92rem; font-weight: 500; }
+.nav a:hover { color: var(--text); text-decoration: none; }
+.theme-btn {
+  width: 34px; height: 34px; display: grid; place-items: center;
+  border: 1px solid var(--border); border-radius: 9px;
+  background: var(--bg-soft); cursor: pointer; padding: 0;
+}
+.theme-btn:hover { border-color: var(--accent); }
+.theme-icon { width: 15px; height: 15px; border-radius: 50%; background: var(--text-dim); box-shadow: inset -4px -4px 0 0 var(--bg-soft); }
+[data-theme="dark"] .theme-icon { background: #fbbf24; box-shadow: none; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 68px 0 34px; border-bottom: 1px solid var(--border); }
+.kicker {
+  margin: 0 0 12px; font-family: var(--mono); font-size: .78rem;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+}
+.hero h1 { margin: 0 0 14px; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.2; letter-spacing: -.025em; font-weight: 700; }
+.hl { background: linear-gradient(transparent 62%, var(--accent-soft) 62%); }
+.lede { margin: 0; font-size: 1.06rem; color: var(--text-dim); max-width: 56ch; }
+
+/* ---------- Toolbar ---------- */
+.toolbar { padding: 28px 20px 6px; }
+.search-box { position: relative; display: flex; align-items: center; }
+.search-box svg {
+  position: absolute; left: 13px; width: 17px; height: 17px;
+  fill: none; stroke: var(--text-dim); stroke-width: 2; stroke-linecap: round;
+}
+.search-box input {
+  width: 100%; padding: 11px 14px 11px 40px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bg-soft); color: var(--text);
+  font-family: var(--font); font-size: .95rem;
+}
+.search-box input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.tag-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.tag {
+  font-family: var(--mono); font-size: .76rem; padding: 4px 10px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--bg-soft); color: var(--text-dim); cursor: pointer;
+}
+.tag:hover { color: var(--text); border-color: var(--accent); }
+.tag.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tag-bar.small .tag { cursor: default; }
+
+/* ---------- Yazı listesi ---------- */
+.post-list { display: flex; flex-direction: column; gap: 14px; padding: 26px 0 10px; }
+.post-card {
+  display: block; padding: 20px 22px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .15s ease, transform .15s ease;
+}
+.post-card:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.post-card h2 { margin: 6px 0 8px; font-size: 1.16rem; line-height: 1.35; color: var(--text); letter-spacing: -.015em; }
+.post-card p { margin: 0 0 12px; color: var(--text-dim); font-size: .95rem; }
+.post-meta { font-family: var(--mono); font-size: .74rem; color: var(--text-dim); letter-spacing: .04em; text-transform: uppercase; }
+.post-card .tag-bar { margin-top: 0; }
+
+/* ---------- Hakkında / footer ---------- */
+.about { padding: 44px 20px 10px; border-top: 1px solid var(--border); margin-top: 40px; }
+.about h2 { font-size: 1.2rem; margin: 0 0 12px; }
+.about p { color: var(--text-dim); }
+.site-footer { margin-top: 56px; border-top: 1px solid var(--border); padding: 22px 0; }
+.site-footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; color: var(--text-dim); font-size: .86rem; }
+
+/* ---------- Tek yazı sayfası ---------- */
+.back-link { display: inline-block; margin: 30px 0 8px; font-size: .9rem; color: var(--text-dim); }
+.back-link:hover { color: var(--accent); }
+.article-head { padding: 6px 0 26px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+.article-head h1 { margin: 12px 0 10px; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.22; letter-spacing: -.025em; }
+.article-meta { margin: 0; font-family: var(--mono); font-size: .78rem; color: var(--text-dim); display: flex; gap: 14px; }
+.article { padding-bottom: 40px; }
+
+/* ---------- Prose (markdown çıktısı) ---------- */
+.prose { font-size: 1.02rem; }
+.prose h2 { margin: 2.2em 0 .6em; font-size: 1.4rem; letter-spacing: -.02em; padding-bottom: .3em; border-bottom: 1px solid var(--border); }
+.prose h3 { margin: 1.8em 0 .5em; font-size: 1.14rem; }
+.prose p { margin: 0 0 1.1em; }
+.prose ul, .prose ol { margin: 0 0 1.1em; padding-left: 1.3em; }
+.prose li { margin-bottom: .4em; }
+.prose img { max-width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+.prose blockquote {
+  margin: 1.3em 0; padding: .1em 1.1em;
+  border-left: 3px solid var(--accent); background: var(--accent-soft);
+  border-radius: 0 8px 8px 0; color: var(--text-dim);
+}
+.prose code {
+  font-family: var(--mono); font-size: .875em;
+  background: var(--accent-soft); color: var(--accent);
+  padding: .15em .4em; border-radius: 5px;
+}
+.prose pre {
+  background: var(--code-bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px; overflow-x: auto; margin: 0 0 1.3em;
+}
+.prose pre code { background: none; color: #e6edf3; padding: 0; font-size: .86rem; line-height: 1.6; }
+.prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.3em; font-size: .93rem; display: block; overflow-x: auto; }
+.prose th, .prose td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+.prose th { background: var(--bg-soft); font-weight: 600; }
+.prose hr { border: none; border-top: 1px solid var(--border); margin: 2.2em 0; }
+
+@media (max-width: 600px) {
+  .hero { padding: 46px 0 26px; }
+  .nav { gap: 14px; }
+  .post-card { padding: 17px 18px; }
+}
