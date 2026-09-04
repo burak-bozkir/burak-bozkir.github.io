@@ -1,5 +1,12 @@
 [
   {
+    "slug": "tryhackme-recruit",
+    "title": "TryHackMe Recruit — LFI'den SQL Injection'a Bir Zincir",
+    "date": "2026-09-04",
+    "summary": "Sızan bir log dosyasından başlayıp file:// wrapper ile LFI, ardından Union-based SQL Injection ile admin hesabına: adım adım öğretici bir writeup.",
+    "tags": ["TryHackMe", "Writeup", "LFI", "SQL Injection", "Web Security"]
+  },
+  {
     "slug": "nmap-ile-ag-kesfi",
     "title": "Nmap ile Ağ Keşfi: Temelden Pratiğe",
     "date": "2026-09-03",
