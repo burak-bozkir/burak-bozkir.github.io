@@ -130,7 +130,24 @@ function initPost() {
       var meta = (res[0] || []).filter(function (p) { return p.slug === slug; })[0] || {};
       var md = res[1];
 
-      document.title = (meta.title || slug) + " — CyberBlog";
+      var fullTitle = (meta.title || slug) + " — CyberBlog";
+      var desc = meta.summary || "CyberBlog siber güvenlik yazısı.";
+      var pageUrl = "https://burak-bozkir.github.io/post.html?p=" + encodeURIComponent(slug);
+
+      document.title = fullTitle;
+      // SEO / sosyal önizleme etiketlerini bu yazıya göre güncelle
+      function setMeta(id, attr, val) {
+        var el = document.getElementById(id);
+        if (el) el.setAttribute(attr, val);
+      }
+      setMeta("metaDesc", "content", desc);
+      setMeta("ogTitle", "content", fullTitle);
+      setMeta("twTitle", "content", fullTitle);
+      setMeta("ogDesc", "content", desc);
+      setMeta("twDesc", "content", desc);
+      setMeta("ogUrl", "content", pageUrl);
+      setMeta("ogCanonical", "href", pageUrl);
+
       document.getElementById("postTitle").textContent = meta.title || slug;
       document.getElementById("postDate").textContent = meta.date ? trDate(meta.date) : "";
       var words = md.split(/\s+/).length;

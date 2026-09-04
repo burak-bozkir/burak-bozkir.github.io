@@ -140,3 +140,57 @@ Push'tan ~1 dakika sonra site kendini günceller.
 | Yazıya tıklayınca "yazı yüklenemedi" | `slug` ile `.md` dosya adı birebir aynı değil |
 | Tarih yanlış görünüyor | `date` alanı `YYYY-AA-GG` formatında değil |
 | GitHub Pages'te sayfa boş | Repo adı `kullaniciadin.github.io` değil ya da Pages ayarı kaydedilmemiş |
+
+---
+
+## 5. SEO ve arama motorları
+
+Site temel SEO için hazır: `sitemap.xml`, `robots.txt`, Open Graph etiketleri ve her yazıya özel başlık/açıklama var.
+
+### Yeni yazı eklerken sitemap'i güncelle
+
+`sitemap.xml` dosyasını aç, mevcut bir `<url>` bloğunu kopyalayıp yeni yazının bilgileriyle doldur:
+
+```xml
+  <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=YENI-SLUG</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+```
+
+`YENI-SLUG` = yazının `index.json`'daki slug'ı. (Zorunlu değil ama Google yeni yazıyı daha hızlı bulur.)
+
+### Google Search Console'a ekleme (trafik + indeksleme takibi)
+
+1. https://search.google.com/search-console adresine Google hesabınla gir
+2. **URL prefix** seç → `https://burak-bozkir.github.io/` yaz
+3. Doğrulama yöntemi: **HTML tag** seç → sana bir `<meta name="google-site-verification" ...>` satırı verir
+4. O satırdaki `content` kodunu kopyala, `index.html` içindeki şu yorumlu satıra yapıştır ve yorumu (`<!--` ve `-->`) kaldır:
+
+```html
+<meta name="google-site-verification" content="BURAYA_KODUN">
+```
+
+5. Push at, sonra Search Console'da **Verify**'a bas
+6. Doğrulandıktan sonra: **Sitemaps** menüsüne git → `sitemap.xml` yaz → Submit
+
+Birkaç gün içinde hangi aramalarda çıktığını, kaç tıklama aldığını görürsün.
+
+---
+
+## 6. Ziyaretçi sayacı (GoatCounter — ücretsiz, gizlilik dostu)
+
+Kaç kişi geldiğini, hangi sayfanın popüler olduğunu görmek için:
+
+1. https://www.goatcounter.com/ → ücretsiz hesap aç, bir kod (site adı) belirle (örn. `cyberblog`)
+2. Sana verdiği script satırını `index.html` ve `post.html` dosyalarında `</body>`'den hemen önce ekle:
+
+```html
+<script data-goatcounter="https://SENIN-KODUN.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+```
+
+3. Push at. Panelinden ziyaretleri canlı izlersin.
+
+> Not: GoatCounter çerez kullanmaz, KVKK/GDPR uyumludur — çerez uyarısı eklemene gerek kalmaz. Google Analytics'e göre çok daha basit.
