@@ -1,5 +1,17 @@
 [
   {
+    "slug": "file-inclusion-path-traversal",
+    "title": "File Inclusion ve Path Traversal: LFI'nin Anatomisi",
+    "date": "2026-09-05",
+    "summary": "Path Traversal ile LFI nasıl oluşur, filtreler nasıl atlatılır (....//, %00, php://filter, file://) ve LFI nasıl RCE'ye dönüşür — örneklerle.",
+    "tags": [
+      "Web Security",
+      "LFI",
+      "Path Traversal",
+      "OWASP"
+    ]
+  },
+  {
     "slug": "tcp-ip-temelleri",
     "title": "TCP/IP Nasıl Çalışır? Üçlü El Sıkışma ve Katmanlar",
     "date": "2026-09-05",
