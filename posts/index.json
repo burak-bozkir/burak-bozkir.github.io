@@ -1,23 +1,48 @@
 [
   {
+    "slug": "tcp-ip-temelleri",
+    "title": "TCP/IP Nasıl Çalışır? Üçlü El Sıkışma ve Katmanlar",
+    "date": "2026-09-05",
+    "summary": "Veri bir bilgisayardan diğerine nasıl gidiyor? TCP ve UDP farkı, 3-way handshake, TCP durumları ve TCP/IP katmanları — sade bir dille.",
+    "tags": [
+      "Networking",
+      "TCP/IP",
+      "Temeller"
+    ]
+  },
+  {
     "slug": "tryhackme-recruit",
     "title": "TryHackMe Recruit — LFI'den SQL Injection'a Bir Zincir",
     "date": "2026-09-04",
     "summary": "Sızan bir log dosyasından başlayıp file:// wrapper ile LFI, ardından Union-based SQL Injection ile admin hesabına: adım adım öğretici bir writeup.",
-    "tags": ["TryHackMe", "Writeup", "LFI", "SQL Injection", "Web Security"]
+    "tags": [
+      "TryHackMe",
+      "Writeup",
+      "LFI",
+      "SQL Injection",
+      "Web Security"
+    ]
   },
   {
     "slug": "nmap-ile-ag-kesfi",
     "title": "Nmap ile Ağ Keşfi: Temelden Pratiğe",
     "date": "2026-09-03",
     "summary": "Bir hedefi taramaya nereden başlanır? Nmap'in en çok kullandığım bayrakları, tarama tipleri ve çıktıyı okuma yöntemim.",
-    "tags": ["Nmap", "Recon", "Araçlar"]
+    "tags": [
+      "Nmap",
+      "Recon",
+      "Araçlar"
+    ]
   },
   {
     "slug": "xss-nedir",
     "title": "XSS Nedir? Üç Tipini Örneklerle Anlamak",
     "date": "2026-09-01",
     "summary": "Reflected, Stored ve DOM-based XSS arasındaki farkı, nasıl test edildiğini ve nasıl kapatıldığını sade bir dille anlatıyorum.",
-    "tags": ["Web Security", "XSS", "OWASP"]
+    "tags": [
+      "Web Security",
+      "XSS",
+      "OWASP"
+    ]
   }
 ]
