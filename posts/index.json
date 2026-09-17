@@ -1,5 +1,19 @@
 [
   {
+    "slug": "tryhackme-support",
+    "title": "TryHackMe Support — LFI, Cookie Manipülasyonu, IDOR ve RCE",
+    "date": "2026-09-17",
+    "summary": "Hydra brute-force'tan başlayıp tema seçicideki LFI, md5 çerezle yetki yükseltme, API'de IDOR ve date alanında komut enjeksiyonu ile RCE'ye: adım adım orta seviye writeup.",
+    "tags": [
+      "TryHackMe",
+      "Writeup",
+      "LFI",
+      "IDOR",
+      "RCE",
+      "Web Security"
+    ]
+  },
+  {
     "slug": "file-inclusion-path-traversal",
     "title": "File Inclusion ve Path Traversal: LFI'nin Anatomisi",
     "date": "2026-09-05",

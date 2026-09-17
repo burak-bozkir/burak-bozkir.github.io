@@ -174,3 +174,34 @@ a:hover { text-decoration: underline; }
   .nav { gap: 14px; }
   .post-card { padding: 17px 18px; }
 }
+
+/* ============================================================
+   Görsel büyütme (lightbox)
+   ============================================================ */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: none; align-items: center; justify-content: center;
+  padding: 28px;
+  background: rgba(5, 8, 13, .88);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; animation: lb-fade .15s ease; }
+@keyframes lb-fade { from { opacity: 0; } to { opacity: 1; } }
+.lightbox-img {
+  max-width: 95vw; max-height: 90vh;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .5);
+  cursor: default;
+}
+.lightbox-close {
+  position: absolute; top: 18px; right: 22px;
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  font-size: 1.8rem; line-height: 1;
+  color: #fff; background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 10px; cursor: pointer;
+}
+.lightbox-close:hover { background: rgba(255, 255, 255, .22); }

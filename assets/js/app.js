@@ -164,9 +164,50 @@ function initPost() {
           try { hljs.highlightElement(block); } catch (e) {}
         });
       }
+
+      // Görselleri tıklanınca büyüt (lightbox)
+      enableLightbox(bodyEl);
     })
     .catch(function () {
       document.getElementById("postTitle").textContent = "Yazı yüklenemedi";
       fail(bodyEl, "posts/" + slug + ".md bulunamadı ya da site yerel sunucu olmadan açıldı.");
     });
+}
+
+
+/* ---------- Görsel büyütme (lightbox) ---------- */
+function enableLightbox(container) {
+  var overlay = document.getElementById("lightbox");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "lightbox";
+    overlay.className = "lightbox";
+    overlay.innerHTML =
+      '<button class="lightbox-close" aria-label="Kapat">&times;</button>' +
+      '<img class="lightbox-img" alt="">';
+    document.body.appendChild(overlay);
+
+    function close() {
+      overlay.classList.remove("open");
+      var img = overlay.querySelector(".lightbox-img");
+      if (img) img.src = "";
+    }
+    overlay.addEventListener("click", function (e) {
+      // resmin kendisine değil, boşluğa/kapat'a tıklayınca kapan
+      if (e.target === overlay || e.target.classList.contains("lightbox-close")) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+  }
+
+  container.querySelectorAll("img").forEach(function (img) {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", function () {
+      var big = overlay.querySelector(".lightbox-img");
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt || "";
+      overlay.classList.add("open");
+    });
+  });
 }
