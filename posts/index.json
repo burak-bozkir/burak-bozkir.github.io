@@ -1,5 +1,16 @@
 [
   {
+    "slug": "linux-privilege-escalation",
+    "title": "Linux Yetki Yükseltme: 7 Klasik Yol",
+    "date": "2026-09-27",
+    "summary": "sudo -l, LD_PRELOAD, SUID/SGID, PATH, capabilities, cron ve NFS — her biri için açıklama, tespit, örnek istismar ve neden çalıştığı. Root'a giden yolların rehberi.",
+    "tags": [
+      "Linux",
+      "Privilege Escalation",
+      "Pentest"
+    ]
+  },
+  {
     "slug": "tryhackme-support",
     "title": "TryHackMe Support — LFI, Cookie Manipülasyonu, IDOR ve RCE",
     "date": "2026-09-17",
