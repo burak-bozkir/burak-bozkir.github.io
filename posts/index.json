@@ -1,5 +1,16 @@
 [
   {
+    "slug": "windows-privilege-escalation",
+    "title": "Windows Yetki Yükseltme: Kimlik Bilgileri, Servisler ve Ayrıcalıklar",
+    "date": "2026-09-28",
+    "summary": "Açıkta kalmış parolalar, zamanlanmış görevler, servis yanlış yapılandırmaları (unquoted path, zayıf DACL), AlwaysInstallElevated ve token ayrıcalıkları (SeBackup, SeImpersonate) — SYSTEM'e giden yolların rehberi.",
+    "tags": [
+      "Windows",
+      "Privilege Escalation",
+      "Pentest"
+    ]
+  },
+  {
     "slug": "linux-privilege-escalation",
     "title": "Linux Yetki Yükseltme: 7 Klasik Yol",
     "date": "2026-09-27",
