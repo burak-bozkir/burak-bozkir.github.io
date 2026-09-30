@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-active-directory-basics</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://burak-bozkir.github.io/post.html?p=windows-privilege-escalation</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.8</priority>

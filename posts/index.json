@@ -1,5 +1,17 @@
 [
   {
+    "slug": "tryhackme-active-directory-basics",
+    "title": "Active Directory Temelleri: Domain, Kerberos, GPO ve Güvenler",
+    "date": "2026-09-30",
+    "summary": "TryHackMe Active Directory Basics odasının kavram özeti: domain ve DC, AD nesneleri, OU vs grup, Kerberos/NTLM, ağaç-orman-güven ilişkileri, GPO — ve her kavramın saldırgan gözüyle önemi.",
+    "tags": [
+      "Active Directory",
+      "Windows",
+      "Temeller",
+      "TryHackMe"
+    ]
+  },
+  {
     "slug": "windows-privilege-escalation",
     "title": "Windows Yetki Yükseltme: Kimlik Bilgileri, Servisler ve Ayrıcalıklar",
     "date": "2026-09-28",
