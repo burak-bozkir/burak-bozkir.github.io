@@ -13,32 +13,6 @@
     ]
   },
   {
-    "slug": "tryhackme-proxy",
-    "title": "TryHackMe Proxy — Constrained Delegation ile Domain Compromise",
-    "date": "2026-10-07",
-    "summary": "Anonim SMB erişiminden coercion ile servis hesabı hash'i, kırma, BloodHound ve constrained delegation (S4U2Self/S4U2Proxy) ile Administrator biletine: adım adım AD writeup.",
-    "tags": [
-      "Active Directory",
-      "Constrained Delegation",
-      "Kerberos",
-      "TryHackMe",
-      "Pentest"
-    ]
-  },
-  {
-    "slug": "tryhackme-forward",
-    "title": "TryHackMe Forward — RBCD ile Domain Compromise",
-    "date": "2026-10-07",
-    "summary": "KeePass veritabanını LaZagne ile açıp parola yeniden kullanımıyla yanal hareket, ardından RBCD (addcomputer + rbcd.py + getST) ile Administrator'ı taklit edip domain'i devralma. Constrained delegation ile karşılaştırmalı AD writeup.",
-    "tags": [
-      "Active Directory",
-      "RBCD",
-      "Kerberos",
-      "TryHackMe",
-      "Pentest"
-    ]
-  },
-  {
     "slug": "tryhackme-credential-harvesting",
     "title": "Credential Harvesting: Yerel Admin'den Domain Admin'e",
     "date": "2026-10-05",
