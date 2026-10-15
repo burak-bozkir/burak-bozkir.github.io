@@ -6,6 +6,31 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-silent-monitor</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-proxy</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-forward</loc>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-credential-harvesting</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-intro-to-ad-breaching</loc>
+    <lastmod>2026-10-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://burak-bozkir.github.io/post.html?p=tryhackme-active-directory-basics</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>

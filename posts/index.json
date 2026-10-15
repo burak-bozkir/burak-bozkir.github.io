@@ -1,5 +1,70 @@
 [
   {
+    "slug": "tryhackme-silent-monitor",
+    "title": "TryHackMe Silent Monitor — SQLi, Command Injection ve CVE ile Root",
+    "date": "2026-10-15",
+    "summary": "Gizli bir iç servisi keşfedip SQL injection ile giriş, ping aracında %0a newline command injection, sızan parolayla SSH ve PackageKit TOCTOU açığı (CVE-2026-41651) ile root: adım adım Jr Pentester writeup.",
+    "tags": [
+      "TryHackMe",
+      "Writeup",
+      "SQL Injection",
+      "Command Injection",
+      "Privilege Escalation"
+    ]
+  },
+  {
+    "slug": "tryhackme-proxy",
+    "title": "TryHackMe Proxy — Constrained Delegation ile Domain Compromise",
+    "date": "2026-10-07",
+    "summary": "Anonim SMB erişiminden coercion ile servis hesabı hash'i, kırma, BloodHound ve constrained delegation (S4U2Self/S4U2Proxy) ile Administrator biletine: adım adım AD writeup.",
+    "tags": [
+      "Active Directory",
+      "Constrained Delegation",
+      "Kerberos",
+      "TryHackMe",
+      "Pentest"
+    ]
+  },
+  {
+    "slug": "tryhackme-forward",
+    "title": "TryHackMe Forward — RBCD ile Domain Compromise",
+    "date": "2026-10-07",
+    "summary": "KeePass veritabanını LaZagne ile açıp parola yeniden kullanımıyla yanal hareket, ardından RBCD (addcomputer + rbcd.py + getST) ile Administrator'ı taklit edip domain'i devralma. Constrained delegation ile karşılaştırmalı AD writeup.",
+    "tags": [
+      "Active Directory",
+      "RBCD",
+      "Kerberos",
+      "TryHackMe",
+      "Pentest"
+    ]
+  },
+  {
+    "slug": "tryhackme-credential-harvesting",
+    "title": "Credential Harvesting: Yerel Admin'den Domain Admin'e",
+    "date": "2026-10-05",
+    "summary": "Windows kimlik bilgisi depoları (LSASS, SAM, LSA Secrets, DPAPI, NTDS.dit), Mimikatz ile harvesting, secretsdump + DCSync ve pass-the-hash ile domain devralma — tek exploit olmadan DA'ya tırmanış.",
+    "tags": [
+      "Active Directory",
+      "Mimikatz",
+      "DCSync",
+      "Pass-the-Hash",
+      "Pentest"
+    ]
+  },
+  {
+    "slug": "tryhackme-intro-to-ad-breaching",
+    "title": "AD Breaching: İlk Foothold'u Ele Geçirmek",
+    "date": "2026-10-02",
+    "summary": "Bir domain'e sıfırdan ilk geçerli hesabı almak: Kerbrute ile kullanıcı doğrulama, Git/Jenkins'te credential avı, NetExec ile password spraying ve coercion saldırıları (LDAP passback, .url + Responder). TryHackMe Intro to AD Breaching writeup.",
+    "tags": [
+      "Active Directory",
+      "Pentest",
+      "Password Spraying",
+      "Coercion",
+      "TryHackMe"
+    ]
+  },
+  {
     "slug": "tryhackme-active-directory-basics",
     "title": "Active Directory Temelleri: Domain, Kerberos, GPO ve Güvenler",
     "date": "2026-09-30",
